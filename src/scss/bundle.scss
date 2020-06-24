@@ -1,0 +1,89 @@
+@import './variables';
+@import './media-queries';
+@import './fonts';
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	//font-family: rawline, sans-serif;
+}
+body {
+	background-color: $red;
+}
+
+a {
+	color: $aioli;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.link-no-border {
+	border-bottom: none;
+}
+
+html {
+	background-color: $red;
+}
+
+body {
+	color: $black;
+	//font-family: $site-font;
+	font-size: 0.9rem;
+	letter-spacing: 0.4px;
+	@include tablet {
+		font-size: 1rem;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0 0 $sm;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1.8rem;
+	@include tablet {
+		font-size: 2rem;
+	}
+}
+
+h2 {
+	font-size: 1.575rem;
+	@include tablet {
+		font-size: 1.75rem;
+	}
+}
+
+h3 {
+	font-size: 1.225rem;
+	@include tablet {
+		font-size: 1.35rem;
+	}
+}
+
+h4 {
+	font-size: 1.045rem;
+	@include tablet {
+		font-size: 1.15rem;
+	}
+}
+
+h5 {
+	font-size: 0.9rem;
+	@include tablet {
+		font-size: 1rem;
+	}
+}
+
+p {
+	margin: 0 0 $sm;
+}
+
+@import './header.scss';

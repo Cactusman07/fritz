@@ -1,0 +1,137 @@
+header {
+	background-color: $red;
+	z-index: 100;
+	width: 100%;
+	position: fixed;
+	height: 175px;
+	padding: $med 0 $x-sm 0;
+	text-align: center;
+
+	#logo {
+		max-width: 160px;
+	}
+
+	// Menu
+	.open {
+		position: fixed;
+		top: 160px;
+		left: $xx-lrg;
+		width: $huge;
+		height: $huge;
+		display: block;
+		cursor: pointer;
+		transition: all 0.2s linear;
+		border-radius: 50%;
+		background-color: $orange;
+
+		&:hover {
+			background-color: $black;
+		}
+		span {
+			display: block;
+			float: left;
+			clear: both;
+			height: 4px;
+			width: $med;
+			border-radius: $xx-lrg;
+			background-color: $aioli;
+			position: absolute;
+			right: 11px;
+			top: 8px;
+			overflow: hidden;
+			transition: all 0.4s ease;
+			&:nth-child(1) {
+				margin-top: $xxx-sm;
+				z-index: 9;
+			}
+			&:nth-child(2) {
+				margin-top: $x-sm;
+			}
+			&:nth-child(3) {
+				margin-top: $med;
+			}
+		}
+	}
+	#menu-main-menu {
+		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		top: 0;
+		bottom: 0;
+		width: 65%;
+		position: absolute;
+		background-color: $black;
+		border-radius: 0;
+		z-index: 18;
+		overflow: hidden;
+		li {
+			display: block;
+			float: left;
+			clear: both;
+			height: auto;
+			margin-right: -160px;
+			transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			&:first-child {
+				margin-top: 180px;
+			}
+			&:nth-child(1) {
+				-webkit-transition-delay: 0.05s;
+			}
+			&:nth-child(2) {
+				-webkit-transition-delay: 0.1s;
+			}
+			&:nth-child(3) {
+				-webkit-transition-delay: 0.15s;
+			}
+			&:nth-child(4) {
+				-webkit-transition-delay: 0.2s;
+			}
+			&:nth-child(5) {
+				-webkit-transition-delay: 0.25s;
+			}
+			a {
+				transition: all 0.2s ease;
+				color: $aioli;
+				font-size: 16px;
+				width: 100%;
+				display: block;
+				float: left;
+				font-weight: 600;
+				line-height: $xx-lrg;
+				text-decoration: none;
+				border-bottom: none;
+				&:hover {
+					color: $orange;
+				}
+			}
+		}
+	}
+
+	.oppenned {
+		#menu-main-menu {
+			opacity: 1;
+			height: 100%;
+		}
+		span:nth-child(2) {
+			overflow: visible;
+		}
+		span:nth-child(1),
+		span:nth-child(3) {
+			z-index: 100;
+			transform: rotate(45deg);
+		}
+		span:nth-child(1) {
+			transform: rotate(45deg) translateY(8px) translateX(6px);
+		}
+		span:nth-child(2) {
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			position: fixed;
+			border-radius: 0;
+			background-color: rgba($black, 0.65);
+		}
+		span:nth-child(3) {
+			transform: rotate(-45deg) translateY(-8px) translateX(6px);
+		}
+	}
+}
