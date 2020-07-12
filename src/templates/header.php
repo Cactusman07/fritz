@@ -1,6 +1,7 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
-<?php $fav_url = get_template_directory_uri() . '/' . 'images/favicon-16x16.png'; ?>
+<?php $fav_url = get_template_directory_uri() . '/' . 'images/favicon/favicon-16x16.png'; ?>
 <?php $logo = get_template_directory_uri() . '/' . 'images/Fritzs-Wieners-Logo.png'; ?>
+<?php $icon = get_template_directory_uri() . '/' . 'images/HeartIcon.png'; ?>
 
 
 <!DOCTYPE html>
@@ -19,19 +20,24 @@
     <script type='text/javascript' src='<?php echo THEME_URI; ?>js/html5.js'></script>
     <![endif] -->
     
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />    
+
     <?php wp_head(); ?>
     </head>
-  <body <?php body_class(); ?>>
-    <header>
-      <a href='<?php get_template_directory_uri() ?>' class='link-no-border'>
-        <img id='logo' src='<?php echo $logo ?>'/>
-      </a>
+    <body <?php body_class(); ?>>
+      <header>
+        <a href='<?php get_template_directory_uri(); ?>' class='link-no-border'>
+          <img id='logo' src='<?php echo $logo; ?>'/>
+        </a>
 
-      <div class='open' id='mainMenu'>
-        <span class='cls'></span>
-        <span>
-           <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
-        </span>
-        <span class='cls'></span>
-    </div>
-    </header>
+        <div class='open' id='mainMenu'>
+          <span class='cls'></span>
+          <span>
+            <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
+          </span>
+          <span class='cls'></span>
+      </div>
+      <img id='headerIcon' src='<?php echo $icon; ?>' />
+      </header>
+      <div id='headerBuffer'></div>

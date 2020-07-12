@@ -1,0 +1,60 @@
+/* About us page */
+
+#aboutUsContainer {
+  background-color: $mustard;
+
+  h1.not-in-image {
+    padding: $med 0;
+    color: $white;
+    @include textShadow($black);
+  }
+
+  content {
+    margin: $xx-lrg 0;
+    padding-bottom: $x-lrg;
+    display: block;
+
+    ul {
+      padding-left: $huge;
+      margin: 0 auto;
+
+      li {
+        text-align: left;
+        position: relative;
+
+        @include tablet {
+          padding-left: initial;
+        }
+
+        &:before {
+          content: ' ';
+          width: $med;
+          height: $med;
+          border-radius: 50%;
+          background-color: $black;
+          position: absolute;
+          left: -$huge;
+        }
+
+        &:after {
+          content: ' ';
+          width: 5px;
+          height: 150%;
+          left: -$xx-lrg;
+          top: $xx-sm;
+          background-color: $black;
+          position: absolute;
+        }
+
+        &:last-of-type {
+          &:after {
+            width: 0;
+            height: 0;
+            content: '';
+          }
+        }
+      }
+    }
+
+  }
+}

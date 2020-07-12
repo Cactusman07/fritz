@@ -1,6 +1,7 @@
 @import './variables';
 @import './media-queries';
 @import './fonts';
+@import './mixins-functions';
 
 html,
 body {
@@ -10,32 +11,62 @@ body {
 	padding: 0;
 	//font-family: rawline, sans-serif;
 }
+
 body {
 	background-color: $red;
+	color: $black;
+	font-family: $site-font;
+	font-size: 0.9rem;
+	letter-spacing: 0.4px;
+
+	@include tablet {
+		font-size: 1rem;
+	}
 }
 
 a {
-	color: $aioli;
+	color: $white;
 	text-decoration: none;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid $white;
+
+	&:hover {
+		color: $black;
+		border-bottom: 1px solid $black;
+		text-decoration: none;
+	}
 }
 
 .link-no-border {
 	border-bottom: none;
-}
 
-html {
-	background-color: $red;
-}
-
-body {
-	color: $black;
-	//font-family: $site-font;
-	font-size: 0.9rem;
-	letter-spacing: 0.4px;
-	@include tablet {
-		font-size: 1rem;
+	&:hover {
+		border-bottom: none;
 	}
+}
+
+.primary-button {
+	padding: $xx-sm $sm;
+	background-color: $red;
+	box-shadow: $black 3px 3px 8px 2px;
+	font-weight: 600;
+	border-radius: $med;
+	display: inline-block;
+	position: relative;
+	transition: all 0.3s ease-in;
+
+	&:hover {
+		background-color: $black;
+		color: $white;
+		box-shadow: none;
+	}
+}
+
+.white {
+	color: $white;
+}
+
+.red-bg {
+	background-color: $red;
 }
 
 h1,
@@ -44,46 +75,60 @@ h3,
 h4,
 h5 {
 	margin: 0 0 $sm;
-	font-weight: 500;
+	font-weight: 600;
+	font-family: $header-font;
+	letter-spacing: 1px;
 }
 
 h1 {
-	font-size: 1.8rem;
-	@include tablet {
-		font-size: 2rem;
-	}
+	@include fontSize(2.8);
 }
 
 h2 {
-	font-size: 1.575rem;
-	@include tablet {
-		font-size: 1.75rem;
-	}
+	@include fontSize(2.5);
 }
 
 h3 {
-	font-size: 1.225rem;
-	@include tablet {
-		font-size: 1.35rem;
-	}
+	@include fontSize(2.2);
 }
 
 h4 {
-	font-size: 1.045rem;
-	@include tablet {
-		font-size: 1.15rem;
-	}
+	@include fontSize(1.8);
 }
 
 h5 {
-	font-size: 0.9rem;
-	@include tablet {
-		font-size: 1rem;
-	}
+	@include fontSize(1.4);
 }
 
 p {
 	margin: 0 0 $sm;
 }
 
+ul {
+	list-style: none;
+}
+
+.center-content {
+	text-align: center;
+}
+
+.bottom-neg40 {
+	bottom: -$xx-lrg;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.shown {
+	display: initial;
+}
+
 @import './header.scss';
+@import './footer.scss';
+@import './front-page.scss';
+@import './product-container.scss';
+@import './about-us.scss';
+@import './menu.scss';
+@import './franchise.scss';
+@import './defaultPage.scss';

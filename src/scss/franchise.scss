@@ -1,0 +1,106 @@
+#franchiseContainer {
+  background-color: $mustard;
+
+  #intro {
+    margin: 0;
+  }
+
+  h1.not-in-image {
+    padding: $med 0;
+    color: $white;
+    @include textShadow($black);
+  }
+
+  content {
+    margin: $xx-lrg 0;
+    padding-bottom: $x-sm;
+    display: block;
+  }
+}
+
+.franchise-content {
+  padding: $lrg 0;
+  display: block;
+
+  span {
+    font-size: 2em;
+    font-weight: 600;
+    margin-right: $xx-sm;
+  }
+
+  strong {
+    font-size: 1.75em;
+  }
+}
+
+.equipment-content {
+  text-align: left;
+
+  h3 {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  ul {
+    list-style: circle;
+  }
+}
+
+.franchise-img-container {
+  flex-direction: column;
+  display: flex;
+  padding-bottom: $med;
+
+  @include tablet {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .franchise-img {
+    max-width: 75%;
+    height: auto;
+    margin: $x-sm;
+    align-self: center;
+
+    @include tablet {
+      margin: $x-lrg;
+      max-width: 90%;
+    }
+  }
+}
+
+#first,
+#miniFritz {
+  background: linear-gradient(50deg, rgba($black, 0.9), rgba(lighten($black, 15%), 0.75)), url('../images/Fritzs-Wieners-Grill.jpg');
+}
+
+#third {
+  background: linear-gradient(50deg, rgba($black, 0.9), rgba(lighten($black, 15%), 0.75)), url('../images/Fritzs-Wieners-Picnic-Flatlay.jpg');
+}
+
+#fifth,
+#customBuilt {
+  background: linear-gradient(50deg, rgba($black, 0.9), rgba(lighten($black, 15%), 0.75)), url('../images/Fritzs-Wieners-Serving.jpg');
+}
+
+#first,
+#third,
+#fifth,
+#miniFritz,
+#customBuilt {
+  color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include tablet {
+    padding: $sm 0;
+  }
+}
+
+#second,
+#fourth,
+#sixth {
+  color: $black;
+  background-color: $aioli;
+}

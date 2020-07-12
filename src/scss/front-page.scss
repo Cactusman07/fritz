@@ -1,0 +1,36 @@
+#fritzImgContainer {
+  padding-top: $sm;
+  color: $white;
+
+  h1 {
+    text-shadow: $black 2px 2px;
+  }
+
+  content {
+    display: block;
+
+    img {
+      margin-top: $x-sm;
+      width: 80%;
+      max-width: 560px;
+
+      @include tablet {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+#burst {
+  background-image: url('../images/burst.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  max-width: 820px;
+  margin: 0 auto $huge;
+  padding-bottom: 90px;
+
+  @include tablet {
+    padding-bottom: 210px;
+  }
+}

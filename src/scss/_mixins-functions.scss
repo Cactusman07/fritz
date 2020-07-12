@@ -1,0 +1,25 @@
+/* Mixins & Functions */
+
+/* calculate font sizes for different break points */
+@function calcRem($size) {
+  @return #{$size}rem;
+}
+
+@mixin fontSize($fontSize) {
+  $remSize1: $fontSize * 0.65;
+  $remSize2: $fontSize * 0.9;
+
+  font-size: calcRem($remSize1);
+
+  @include phablet {
+    font-size: calcRem($remSize2);
+  }
+
+  @include desktop {
+    font-size: calcRem($fontSize);
+  }
+}
+
+@mixin textShadow($color) {
+  text-shadow: $color 2px 2px;
+}

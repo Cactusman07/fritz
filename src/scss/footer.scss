@@ -1,0 +1,22 @@
+/* Footer.scss */
+
+footer {
+  color: white;
+  min-height: 120px;
+
+  #social {
+    p {
+      float: left;
+    }
+  }
+
+  #siteFooterText {
+    p {
+      float: left;
+
+      @include tablet {
+        float: right;
+      }
+    }
+  }
+}

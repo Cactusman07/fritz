@@ -54,4 +54,95 @@
     }
     add_filter('acf/fields/google_map/api', 'my_acf_google_map_api'); */
 
+  /* Add custom post type 'Products' to Theme */
+  function create_postTypeProducts() {
+		
+    $labels = array(
+      'name'					      => _x( 'Products', 'Post Type General Name', "Fritz's Wieners theme"),
+      'singular name'			  => _x( 'Product', 'Singular Name', "Fritz's Wieners theme"),
+      'menu_name'				    => __( 'Products', "Fritz's Wieners theme"),
+      'all_items'         	=> __( 'All Products', "Fritz's Wieners theme" ),
+      'view_item'         	=> __( 'View Product', "Fritz's Wieners theme" ),
+      'add_new_item'      	=> __( 'Add New Product', "Fritz's Wieners theme" ),
+      'add_new'           	=> __( 'Add Product', "Fritz's Wieners theme" ),
+      'edit_item'         	=> __( 'Edit Product', "Fritz's Wieners theme" ),
+      'update_item'       	=> __( 'Update Product', "Fritz's Wieners theme" ),
+      'search_items'      	=> __( 'Search for Product', "Fritz's Wieners theme" ),
+      'not_found'         	=> __( 'Not Found', "Fritz's Wieners theme" ),
+      'not_found_in_trash'	=> __( 'Not found in Trash', "Fritz's Wieners theme" ),
+    );
+    
+    $args = array(
+      'label'				        => __('Products', "Fritz's Wieners theme"),
+      'description'		      => __('A list of Products and their details.', "Fritz's Wieners theme"),
+      'labels'			        => $labels,
+      'supports'			      => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail' ),
+      'hierarchical' 		    => true,
+      'public'			        => true,
+      'publicly_queryable'  => true,
+      'query_var'           => true,
+      'show_in_rest'        => true,
+      'rest_base'           => 'Products',
+      'rest_controller_class' => 'WP_REST_Posts_Controller',
+      'show_ui'			        => true,
+      'show_in_menu'        => true,
+      'show_in_nav_menus'   => true,
+      'show_in_admin_bar'   => true,
+      'menu_position'       => 5,
+      'can_export'          => true,
+      'has_archive'         => true,
+      'exclude_from_search' => false,
+      'publicly_queryable'  => true,
+      'capability_type'     => 'page',
+      'menu_icon'           => 'dashicons-star-filled',
+    );
+    register_post_type('Products', $args );
+  }
+  add_action('init', 'create_postTypeProducts', 0 );
+
+  /* Add custom post type 'Locations' to Theme */
+  function create_postTypeLocations() {
+		
+    $labels = array(
+      'name'					      => _x( 'Locations', 'Post Type General Name', "Fritz's Wieners theme"),
+      'singular name'			  => _x( 'Location', 'Singular Name', "Fritz's Wieners theme"),
+      'menu_name'				    => __( 'Locations', "Fritz's Wieners theme"),
+      'all_items'         	=> __( 'All Locations', "Fritz's Wieners theme" ),
+      'view_item'         	=> __( 'View Location', "Fritz's Wieners theme" ),
+      'add_new_item'      	=> __( 'Add New Location', "Fritz's Wieners theme" ),
+      'add_new'           	=> __( 'Add Location', "Fritz's Wieners theme" ),
+      'edit_item'         	=> __( 'Edit Location', "Fritz's Wieners theme" ),
+      'update_item'       	=> __( 'Update Location', "Fritz's Wieners theme" ),
+      'search_items'      	=> __( 'Search for Location', "Fritz's Wieners theme" ),
+      'not_found'         	=> __( 'Not Found', "Fritz's Wieners theme" ),
+      'not_found_in_trash'	=> __( 'Not found in Trash', "Fritz's Wieners theme" ),
+    );
+    
+    $args = array(
+      'label'				        => __('Locations', "Fritz's Wieners theme"),
+      'description'		      => __('A list of Locations and their details to list on the Locations Map.', "Fritz's Wieners theme"),
+      'labels'			        => $labels,
+      'supports'			      => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail' ),
+      'hierarchical' 		    => true,
+      'public'			        => true,
+      'publicly_queryable'  => true,
+      'query_var'           => true,
+      'show_in_rest'        => true,
+      'rest_base'           => 'Locations',
+      'rest_controller_class' => 'WP_REST_Posts_Controller',
+      'show_ui'			        => true,
+      'show_in_menu'        => true,
+      'show_in_nav_menus'   => true,
+      'show_in_admin_bar'   => true,
+      'menu_position'       => 6,
+      'can_export'          => true,
+      'has_archive'         => true,
+      'exclude_from_search' => false,
+      'publicly_queryable'  => true,
+      'capability_type'     => 'page',
+      'menu_icon'           => 'dashicons-location-alt',
+    );
+    register_post_type('Locations', $args );
+  }
+  add_action('init', 'create_postTypeLocations', 0 );
 ?>

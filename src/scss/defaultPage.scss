@@ -1,0 +1,17 @@
+/* The scss for the default index.php pages. I.E: No template defined */
+
+#standardPage {
+  background-color: $aioli;
+
+  h1.not-in-image {
+    padding: $med 0;
+    color: $white;
+    @include textShadow($black);
+  }
+
+  content {
+    margin: $xx-lrg 0;
+    padding-bottom: $x-lrg;
+    display: block;
+  }
+}

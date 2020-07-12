@@ -3,19 +3,39 @@ header {
 	z-index: 100;
 	width: 100%;
 	position: fixed;
-	height: 175px;
+	height: 180px;
 	padding: $med 0 $x-sm 0;
 	text-align: center;
 
+	@include phablet {
+		height: 215px;
+	}
+
+	@include tablet {
+		height: 230px;
+	}
+
 	#logo {
-		max-width: 160px;
+		max-width: 140px;
+
+		@include phablet {
+			max-width: 175px;
+		}
+	}
+
+	#headerIcon {
+		position: fixed;
+		top: 140px;
+		right: $xx-lrg;
+		width: $huge;
+		height: auto;
 	}
 
 	// Menu
 	.open {
 		position: fixed;
-		top: 160px;
-		left: $xx-lrg;
+		top: 80px;
+		left: $lrg;
 		width: $huge;
 		height: $huge;
 		display: block;
@@ -24,13 +44,16 @@ header {
 		border-radius: 50%;
 		background-color: $orange;
 
+		@include phablet {
+			top: 140px;
+			left: $xx-lrg;
+		}
+
 		&:hover {
 			background-color: $black;
 		}
+
 		span {
-			display: block;
-			float: left;
-			clear: both;
 			height: 4px;
 			width: $med;
 			border-radius: $xx-lrg;
@@ -40,18 +63,22 @@ header {
 			top: 8px;
 			overflow: hidden;
 			transition: all 0.4s ease;
+
 			&:nth-child(1) {
 				margin-top: $xxx-sm;
 				z-index: 9;
 			}
+
 			&:nth-child(2) {
 				margin-top: $x-sm;
 			}
+
 			&:nth-child(3) {
 				margin-top: $med;
 			}
 		}
 	}
+
 	#menu-main-menu {
 		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		top: 0;
@@ -61,32 +88,48 @@ header {
 		background-color: $black;
 		border-radius: 0;
 		z-index: 18;
-		overflow: hidden;
+		margin-top: 0;
+		max-width: 320px;
+		cursor: initial;
+		text-align: left;
+
 		li {
-			display: block;
 			float: left;
-			clear: both;
-			height: auto;
-			margin-right: -160px;
+			margin-left: $huge;
 			transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			width: 65%;
+			max-width: 180px;
+
+			@include phablet {
+				width: 100%;
+				max-width: 190px;
+				margin-left: 80px;
+			}
+
 			&:first-child {
-				margin-top: 180px;
+				margin-top: $huge;
 			}
+
 			&:nth-child(1) {
-				-webkit-transition-delay: 0.05s;
+				transition-delay: 0.05s;
 			}
+
 			&:nth-child(2) {
-				-webkit-transition-delay: 0.1s;
+				transition-delay: 0.1s;
 			}
+
 			&:nth-child(3) {
-				-webkit-transition-delay: 0.15s;
+				transition-delay: 0.15s;
 			}
+
 			&:nth-child(4) {
-				-webkit-transition-delay: 0.2s;
+				transition-delay: 0.2s;
 			}
+
 			&:nth-child(5) {
-				-webkit-transition-delay: 0.25s;
+				transition-delay: 0.25s;
 			}
+
 			a {
 				transition: all 0.2s ease;
 				color: $aioli;
@@ -98,6 +141,7 @@ header {
 				line-height: $xx-lrg;
 				text-decoration: none;
 				border-bottom: none;
+
 				&:hover {
 					color: $orange;
 				}
@@ -105,22 +149,26 @@ header {
 		}
 	}
 
-	.oppenned {
+	.opened {
 		#menu-main-menu {
 			opacity: 1;
 			height: 100%;
 		}
+
 		span:nth-child(2) {
-			overflow: visible;
+			margin-top: 0;
 		}
+
 		span:nth-child(1),
 		span:nth-child(3) {
 			z-index: 100;
 			transform: rotate(45deg);
 		}
+
 		span:nth-child(1) {
 			transform: rotate(45deg) translateY(8px) translateX(6px);
 		}
+
 		span:nth-child(2) {
 			height: 100%;
 			width: 100%;
@@ -130,8 +178,48 @@ header {
 			border-radius: 0;
 			background-color: rgba($black, 0.65);
 		}
+
 		span:nth-child(3) {
 			transform: rotate(-45deg) translateY(-8px) translateX(6px);
 		}
+	}
+}
+
+#headerBuffer {
+	height: 190px;
+
+	@include phablet {
+		height: 225px;
+	}
+
+	@include tablet {
+		height: 240px;
+	}
+}
+
+#imageHeader {
+	min-height: 220px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	text-align: center;
+
+	h1 {
+		margin-top: $xx-lrg;
+		padding: $sm;
+		background-color: rgba($aioli, 0.65);
+		@include textShadow($orange);
+
+		@include tablet {
+			padding: $lrg;
+		}
+	}
+
+	@include phablet {
+		min-height: 300px;
+	}
+
+	@include tablet {
+		min-height: 480px;
 	}
 }

@@ -38,6 +38,8 @@
 		"yargs": "^15.3.1"
 	},
 	"dependencies": {
+		"jquery": "^3.5.1",
+		"jquery-match-height": "^0.7.2",
 		"moment": "^2.25.3",
 		"snazzy-info-window": "^1.1.1"
 	}
