@@ -116,6 +116,14 @@ ul {
 	bottom: -$xx-lrg;
 }
 
+.padding-bottom-40 {
+	padding-bottom: $xx-lrg;
+}
+
+.padding-top-40 {
+	padding-top: $xx-lrg;
+}
+
 .hidden {
 	display: none !important;
 }
@@ -131,4 +139,5 @@ ul {
 @import './about-us.scss';
 @import './menu.scss';
 @import './franchise.scss';
+@import './bookings.scss';
 @import './defaultPage.scss';

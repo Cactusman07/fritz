@@ -20,6 +20,19 @@ if(!!document.getElementById('mainMenu')){
   });
 }
 
+const throttle = (callback, limit) => {
+  let wait = false;
+  return () => {
+    if(!wait){
+      callback.call();
+      wait = true;
+      setTimeout(function() {
+        wait=false;
+      }, limit);
+    }
+  }
+}
+
 // Scroll animation functions */
 if(!!document.getElementById('productContainer')){
   jQuery(document).ready(
@@ -49,24 +62,15 @@ if(!!document.getElementById('productContainer')){
               setTimeout(function() {
                 item.removeClass('hidden');
                 item.addClass('animate__animated');
-                item.addClass('animate__flipInX');
+                if(i < 3){
+                  item.addClass('animate__fadeInLeft');
+                } else {
+                  item.addClass('animate__fadeInRight');
+                }                
                 matchProductHeight();
               }, i * 150);
             });
             productContainer.addClass('has-animated');           
-          }
-        }
-      }
-
-      const throttle = (callback, limit) => {
-        let wait = false;
-        return () => {
-          if(!wait){
-            callback.call();
-            wait = true;
-            setTimeout(function() {
-              wait=false;
-            }, limit);
           }
         }
       }
@@ -76,11 +80,26 @@ if(!!document.getElementById('productContainer')){
     
       /* Match height for products */
       const matchProductHeight = () => {
-        jQuery('.product').matchHeight();
+        products.matchHeight();
       }
 
       jQuery(window).resize(throttle(matchProductHeight, 100));
       jQuery(window).scroll(throttle(matchProductHeight, 200));
+    }
+  );
+}
+
+if(!!document.getElementById('bookingContainer')){
+  jQuery(document).ready(
+    () => {
+    
+      /* Match height for bookings */
+      const matchBookingHeight = () => {
+        jQuery('.booking-desc').matchHeight();
+      }
+
+      matchBookingHeight();
+      jQuery(window).resize(throttle(matchBookingHeight, 100));
     }
   );
 }

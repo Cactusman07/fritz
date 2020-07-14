@@ -1,0 +1,54 @@
+/* The scss for the default booking.php page. */
+
+#bookingContainer {
+  background-color: $aioli;
+
+  h1.not-in-image {
+    padding: $med 0;
+    color: $white;
+    @include textShadow($black);
+  }
+
+  content {
+    margin: $xx-lrg 0;
+    display: block;
+  }
+
+  .booking-desc {
+    color: $white;
+    padding: $x-sm;
+    border-radius: 4px;
+    border: solid 4px $orange;
+    box-shadow: $black 1px 1px 4px 1px;
+    margin-bottom: $med;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+
+    h3 {
+      @include textShadow($black);
+    }
+
+    &:hover {
+      box-shadow: $black 3px 3px 6px 3px;
+      border: solid 4px $mustard;
+      opacity: 0.9;
+    }
+
+    @include tablet {
+      padding: $lrg;
+    }
+  }
+}
+
+#bookingContacts {
+  padding: $xx-lrg 0;
+  color: $white;
+
+  h2,
+  h3 {
+    @include textShadow($black);
+  }
+}

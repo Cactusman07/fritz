@@ -7,6 +7,9 @@
         <h1 class='animate__animated animate__pulse'><?php the_title(); ?></h1>
         <?php while ( have_posts() ) : the_post(); ?>
           <content>
+            <?php bloginfo( 'description' ); ?>
+            <br/>
+            <br/>
             <?php the_content(); ?>
             <?php 
               $imgUrl = get_the_post_thumbnail_url();
@@ -18,7 +21,8 @@
             
           </content>
           
-          <a href='<?php echo the_field('call_to_action_link'); ?>' class='bottom-neg40 primary-button link-no-border'>
+          <a href='<?php echo the_field('call_to_action_link'); ?>' 
+            class='bottom-neg40 primary-button link-no-border animate__animated animate__headShake animate__delay-2s animate__repeat-2'>
             <?php echo the_field('call_to_action_button'); ?>
           </a>
         <?php endwhile;

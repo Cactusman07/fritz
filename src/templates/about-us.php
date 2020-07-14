@@ -21,11 +21,11 @@
     </div>
   <?php } ?>
 
-    <div class='center-content red-bg'>
-    <?php if(!($imgUrl != '' || $imgUrl != null)){ ?>
-      <h1 class='animate__animated animate__pulse not-in-image'><?php the_title(); ?></h1>
-    <?php } ?>
+  <?php if(!($imgUrl != '' || $imgUrl != null)){ ?>
+    <div class='center-content red-bg'>    
+      <h1 class='animate__animated animate__pulse not-in-image'><?php the_title(); ?></h1>    
     </div>
+  <?php } ?>
 
     <div class='container center-content'>
       <div class='row'>

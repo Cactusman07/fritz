@@ -21,15 +21,16 @@
     </div>
   <?php } ?>
   
+  <?php if(!($imgUrl != '' || $imgUrl != null)){ ?>  
     <div class='container center-content'>
       <div class='row'>
-        <div class='col'>
-        <?php if(!($imgUrl != '' || $imgUrl != null)){ ?>
-          <h1 class='animate__animated animate__pulse white'><?php the_title(); ?></h1>
-        <?php } ?>
+        <div class='col'>        
+          <h1 class='animate__animated animate__pulse white'><?php the_title(); ?></h1>        
         </div>
       </div>
     </div>
+    <?php } ?>
+  
   </div>
 
   <div id='productContainer'>
