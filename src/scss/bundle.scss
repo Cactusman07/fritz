@@ -45,20 +45,11 @@ a {
 }
 
 .primary-button {
-	padding: $xx-sm $sm;
-	background-color: $red;
-	box-shadow: $black 3px 3px 8px 2px;
-	font-weight: 600;
-	border-radius: $med;
-	display: inline-block;
-	position: relative;
-	transition: all 0.3s ease-in;
+	@include button($red, $white, $black);
+}
 
-	&:hover {
-		background-color: $black;
-		color: $white;
-		box-shadow: none;
-	}
+.secondary-button {
+	@include button($aioli, $black, $orange);
 }
 
 .white {
@@ -141,3 +132,4 @@ ul {
 @import './franchise.scss';
 @import './bookings.scss';
 @import './defaultPage.scss';
+@import './locations.scss';

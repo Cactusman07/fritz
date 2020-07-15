@@ -51,4 +51,93 @@
   h3 {
     @include textShadow($black);
   }
+
+  a {
+    margin: $x-sm 0;
+  }
+}
+
+#popupForm {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($black, 0.65);
+  z-index: 2000;
+
+  .contact-form {
+    color: $black;
+    width: 90%;
+    max-width: 550px;
+    max-height: 80%;
+    overflow-y: scroll;
+    background-color: $aioli;
+    box-shadow: $black 8px 8px 12px 6px;
+    margin: $huge auto 0 auto;
+    border-radius: 4px;
+    padding: $sm;
+
+    @include tablet {
+      width: 80%;
+      margin-top: 75px;
+      padding: $lrg;
+    }
+
+    #close {
+      font-size: 2em;
+      font-weight: 800;
+      float: right;
+      cursor: pointer;
+    }
+
+    h3 {
+      @include textShadow($white);
+      margin-top: $xx-sm;
+    }
+
+    form {
+      text-align: center;
+      margin: auto;
+
+      label {
+        text-align: left;
+        font-weight: 600;
+        width: 100%;
+      }
+
+      input {
+        outline: none;
+        padding: $xxx-sm;
+        border: none;
+        background: none;
+        border-bottom: $black solid 2px;
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: $black solid 2px;
+      }
+
+      input[type='submit'] {
+        background-color: $orange;
+        font-weight: 600;
+        font-size: 1.4em;
+        color: $white;
+        @include textShadow($black);
+        border: 1px solid $black;
+        box-shadow: $black 2px 2px 4px 2px;
+        border-radius: 4px;
+        transition: 0.3s all ease;
+
+        &:hover {
+          background-color: $black;
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }

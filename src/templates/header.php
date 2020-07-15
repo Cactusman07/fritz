@@ -27,6 +27,9 @@
     </head>
     <body <?php body_class(); ?>>
       <header>
+        <div id='topLinks'>
+          <?php wp_nav_menu( array( 'theme_location' => 'top-links', 'container' => '' ) ); ?>
+        </div>
         <a href='<?php get_template_directory_uri(); ?>' class='link-no-border'>
           <img id='logo' src='<?php echo $logo; ?>'/>
         </a>
@@ -37,7 +40,7 @@
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
           </span>
           <span class='cls'></span>
-      </div>
-      <img id='headerIcon' src='<?php echo $icon; ?>' />
+        </div>
+        <img id='headerIcon' src='<?php echo $icon; ?>' />
       </header>
       <div id='headerBuffer'></div>

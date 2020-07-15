@@ -2,21 +2,44 @@
 
 footer {
   color: white;
-  min-height: 120px;
+  padding: $sm 0;
 
-  #social {
-    p {
-      float: left;
+  img {
+    height: $x-lrg;
+    width: auto;
+    margin: 0 $xx-sm;
+  }
+
+  #social,
+  #siteFooterText {
+    height: $x-lrg;
+    display: flex;
+    align-items: center;
+    margin: $xxx-sm 0;
+
+    @include tablet {
+      margin: 0;
     }
   }
 
   #siteFooterText {
-    p {
-      float: left;
+    justify-content: flex-start;
 
-      @include tablet {
-        float: right;
-      }
+    p {
+      margin: 0;
+      padding-left: $xx-sm;
     }
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  #social {
+    justify-content: flex-start;
+  }
+
+  @include tablet {
+    padding: $lrg 0;
   }
 }

@@ -20,6 +20,7 @@
   /* Add custom menu */
   function register_menu() {
     register_nav_menu('main-menu',__( 'Main Menu' ));
+    register_nav_menu('top-links',__( 'Top Links' ));
   }
   add_action( 'init', 'register_menu' );
 
@@ -48,11 +49,11 @@
   add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
   
    /* Add Google Map API */
-  /* function my_acf_google_map_api( $api ){
-    $api['key'] = '*****';
+   function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyAN8uDlNkrTYVg4FVKz21sCcUi84y2EhTg';
     return $api;
     }
-    add_filter('acf/fields/google_map/api', 'my_acf_google_map_api'); */
+    add_filter('acf/fields/google_map/api', 'my_acf_google_map_api'); 
 
   /* Add custom post type 'Products' to Theme */
   function create_postTypeProducts() {
@@ -145,4 +146,27 @@
     register_post_type('Locations', $args );
   }
   add_action('init', 'create_postTypeLocations', 0 );
+
+  // Add advance custom fields to rest-api
+  function create_ACF_meta_in_REST() {
+    $postypes_to_exclude = ['acf-field-group','acf-field'];
+    $extra_postypes_to_include = ["page"];
+    $post_types = array_diff(get_post_types(["_builtin" => false], 'names'),$postypes_to_exclude);
+
+    array_push($post_types, $extra_postypes_to_include);
+
+    foreach ($post_types as $post_type) {
+        register_rest_field( $post_type, 'ACF', [
+            'get_callback'    => 'expose_ACF_fields',
+            'schema'          => null,
+       ]
+     );
+    }
+
+  }
+  function expose_ACF_fields( $object ) {
+      $ID = $object['id'];
+      return get_fields($ID);
+  }
+  add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
 ?>

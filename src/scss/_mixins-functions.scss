@@ -23,3 +23,21 @@
 @mixin textShadow($color) {
   text-shadow: $color 2px 2px;
 }
+
+@mixin button($background, $font, $hover) {
+  padding: $xx-sm $sm;
+  background-color: $background;
+  box-shadow: $black 3px 3px 8px 2px;
+  color: $font;
+  font-weight: 600;
+  border-radius: $med;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background-color: $hover;
+    color: $font;
+    box-shadow: none;
+  }
+}

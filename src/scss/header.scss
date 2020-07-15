@@ -183,6 +183,38 @@ header {
 			transform: rotate(-45deg) translateY(-8px) translateX(6px);
 		}
 	}
+
+	#topLinks {
+		width: 100%;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 75px;
+		display: none;
+
+		@include desktop {
+			display: initial;
+		}
+
+		#menu-top-links {
+			width: 700px;
+			display: inline-flex;
+			padding: 0;
+			justify-content: space-between;
+
+			li {
+				width: 200px;
+
+				&:first-child {
+					text-align: right;
+				}
+
+				&:last-child {
+					text-align: left;
+				}
+			}
+		}
+	}
 }
 
 #headerBuffer {
@@ -220,6 +252,10 @@ header {
 	}
 
 	@include tablet {
-		min-height: 480px;
+		min-height: 360px;
+	}
+
+	@include desktop {
+		min-height: 440px;
 	}
 }

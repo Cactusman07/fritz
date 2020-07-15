@@ -100,6 +100,51 @@ if(!!document.getElementById('bookingContainer')){
 
       matchBookingHeight();
       jQuery(window).resize(throttle(matchBookingHeight, 100));
-    }
+
+      /* Contact form(s) logic */
+      const $aucklandLink = jQuery('#aucklandContact'),
+            $christchurchLink = jQuery('#christchurchContact'),
+            $dunedinLink = jQuery('#dunedinContact'),
+            $hamiltonLink = jQuery('#hamiltonContact'),
+            $wellingtonLink = jQuery('#wellingtonContact');
+
+      const $popupFormHolder = jQuery('#popupForm'),
+            $closePopup = jQuery('#close');
+
+      const $aucklandForm = jQuery('#aucklandForm'),
+            $christchurchForm = jQuery('#christchurchForm'),
+            $dunedinForm = jQuery('#dunedinForm'),
+            $hamiltonForm = jQuery('#hamiltonForm'),
+            $wellingtonForm = jQuery('#wellingtonForm');
+
+      $aucklandLink
+      .add($christchurchLink)
+      .add($dunedinLink)
+      .add($hamiltonLink)
+      .add($wellingtonLink)      
+      .click(function(e) {
+        e.preventDefault();
+        $popupFormHolder.removeClass('hidden');
+      });
+
+      $aucklandLink.click(() => { $aucklandForm.removeClass('hidden'); });
+      $christchurchLink.click(() => { $christchurchForm.removeClass('hidden'); });
+      $dunedinLink.click(() => { $dunedinForm.removeClass('hidden'); });
+      $hamiltonLink.click(() => { $hamiltonForm.removeClass('hidden'); });
+      $wellingtonLink.click(() => { $wellingtonForm.removeClass('hidden'); });
+
+      jQuery('.contact-form').click(function(event){
+        event.stopPropagation();
+      });
+
+      $popupFormHolder.add($closePopup).click(function(){
+        $popupFormHolder.addClass('hidden');
+        $aucklandForm.addClass('hidden');
+        $christchurchForm.addClass('hidden');
+        $dunedinForm.addClass('hidden');
+        $wellingtonForm.addClass('hidden');
+        $hamiltonForm.addClass('hidden');
+      });
+    } 
   );
 }
