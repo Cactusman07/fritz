@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />    
 
     <?php wp_head(); ?>    
-
+    <script type="text/javascript" defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN8uDlNkrTYVg4FVKz21sCcUi84y2EhTg&libraries=geometry,places&callback=initMap">
+    </script>
     </head>
     <body <?php body_class(); ?>>
       <header>

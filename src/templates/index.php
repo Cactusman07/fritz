@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 <?php $imgUrl = get_the_post_thumbnail_url(); ?>
 
-  <?php $menuLink = get_template_directory_uri() . '/menu'; ?>
-
   <div id='standardPage'>
   <?php if($imgUrl != '' || $imgUrl != null){ ?>
     <div id='imageHeader' style='background-image:url("<?php echo $imgUrl; ?>")'>

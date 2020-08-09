@@ -11,9 +11,6 @@
       <div class='row'>
         <div class='col-md-6' id='social'>
           <img src='<?php echo $musicNote; ?>' />
-          <a href='http://www.twitter.com/FritzsWieners' class='link-no-border' target='_blank'>
-            <img src='<?php echo $twitter; ?>' />
-          </a>
           <a href='http://www.facebook.com/FritzsWieners' class='link-no-border' target='_blank'>
             <img src='<?php echo $facebook; ?>' />
           </a>

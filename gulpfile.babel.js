@@ -103,7 +103,8 @@ export const styles = () => {
 // Task to build js file as bundle.js
 export const scripts = () => {
   return src([
-    js.src + 'bundle.js'
+    js.src + 'map.js',
+    js.src + 'bundle.js'    
   ])
   .pipe(webpack({
     module: {

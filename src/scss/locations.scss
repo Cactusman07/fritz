@@ -1,0 +1,35 @@
+/* Location page */
+
+#locationPage{
+  background-color: $aioli;  
+}
+
+#mapContainer{
+  position: relative;
+
+  ul{
+    list-style: disc;
+  }
+
+  #map {
+    min-height: 600px;
+    width: 100%;
+    position: relative;    
+  }
+
+  #infoWindow{
+    position: absolute;
+    left: $med;
+    top: $med;
+    background-color: $white;
+    padding: $med;
+    border-radius: 4px;
+    box-shadow: $black 2px 2px 2px;
+    max-width:320px;
+
+    @include tablet{
+      left: initial;
+      right: $med;
+    }
+  }
+}

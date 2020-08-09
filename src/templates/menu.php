@@ -74,6 +74,11 @@
           <?php endif; wp_reset_postdata();?>
 
         <?php endwhile; wp_reset_query(); ?>
+
+        <div class='col-12'>
+          <h4>Drinks</h4>
+          <p>A selection of drinks also available.</p>
+        </div>
       </div>
     </div>
   </div>

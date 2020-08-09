@@ -27,7 +27,7 @@
     </div>
   <?php } ?>
 
-    <div class='container center-content'>
+    <div class='container center-content red-links'>
       <div class='row'>
         <div class='col'>          
           <?php while ( have_posts() ) : the_post(); ?>

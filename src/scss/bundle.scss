@@ -36,6 +36,18 @@ a {
 	}
 }
 
+.red-links{
+	a{
+		color: $red;
+		border-bottom: 1px solid $red;
+		&:hover {
+			color: $black;
+			border-bottom: 1px solid $black;
+			text-decoration: none;
+		}
+	}
+}
+
 .link-no-border {
 	border-bottom: none;
 
@@ -133,3 +145,4 @@ ul {
 @import './bookings.scss';
 @import './defaultPage.scss';
 @import './locations.scss';
+@import './contact.scss';

@@ -30,7 +30,7 @@
   <?php while ( have_posts() ) : the_post(); ?>
   <?php $bookings = get_field('bookings_descriptions'); ?>
   
-    <div class='container center-content'>
+    <div class='container center-content red-links'>
       <div class='row'>
         <div class='col'>          
           <content>
@@ -39,6 +39,7 @@
         </div>
       </div>
     </div>
+    
     <div class='center-content red-bg'>
       <?php include 'booking-contacts.php' ?>
     </div>

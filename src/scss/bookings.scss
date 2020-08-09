@@ -6,7 +6,7 @@
   h1.not-in-image {
     padding: $med 0;
     color: $white;
-    @include textShadow($black);
+    // @include textShadow($black);
   }
 
   content {
@@ -27,9 +27,9 @@
     opacity: 1;
     transition: all 0.3s ease-in;
 
-    h3 {
+    /* h3 {
       @include textShadow($black);
-    }
+    } */
 
     &:hover {
       box-shadow: $black 3px 3px 6px 3px;
@@ -47,10 +47,10 @@
   padding: $xx-lrg 0;
   color: $white;
 
-  h2,
+  /* h2,
   h3 {
     @include textShadow($black);
-  }
+  } */
 
   a {
     margin: $x-sm 0;
@@ -92,7 +92,7 @@
     }
 
     h3 {
-      @include textShadow($white);
+      // @include textShadow($white);
       margin-top: $xx-sm;
     }
 
@@ -127,7 +127,7 @@
         font-weight: 600;
         font-size: 1.4em;
         color: $white;
-        @include textShadow($black);
+        // @include textShadow($black);
         border: 1px solid $black;
         box-shadow: $black 2px 2px 4px 2px;
         border-radius: 4px;

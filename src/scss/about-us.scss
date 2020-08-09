@@ -6,7 +6,7 @@
   h1.not-in-image {
     padding: $med 0;
     color: $white;
-    @include textShadow($black);
+    //@include textShadow($black);
   }
 
   content {

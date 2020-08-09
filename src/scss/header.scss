@@ -147,6 +147,15 @@ header {
 				}
 			}
 		}
+		.sub-menu{
+			li{
+				margin-left: 0px;
+				
+				&:first-child {
+					margin-top: $xxx-sm;
+				}
+			}
+		}
 	}
 
 	.opened {
@@ -240,7 +249,7 @@ header {
 		margin-top: $xx-lrg;
 		padding: $sm;
 		background-color: rgba($aioli, 0.65);
-		@include textShadow($orange);
+		// @include textShadow($orange);
 
 		@include tablet {
 			padding: $lrg;

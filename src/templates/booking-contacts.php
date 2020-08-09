@@ -42,7 +42,7 @@
         <h3>Hamilton</h3>
         <?php echo do_shortcode('[contact-form-7 id="213" title="Contact form Hamilton"]'); ?>
       </div>
-      <div id='wellington' class='hidden'>
+      <div id='wellingtonForm' class='hidden'>
         <h3>Wellington</h3>
         <?php echo do_shortcode('[contact-form-7 id="214" title="Contact form Wellington"]'); ?>
       </div>

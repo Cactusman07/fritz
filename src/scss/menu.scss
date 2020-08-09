@@ -1,8 +1,8 @@
 #menuContainer {
 
-  h1 {
+  /* h1 {
     @include textShadow($black);
-  }
+  } */
 
   h1.not-in-image {
     margin-top: $med;

@@ -52,8 +52,8 @@
    function my_acf_google_map_api( $api ){
     $api['key'] = 'AIzaSyAN8uDlNkrTYVg4FVKz21sCcUi84y2EhTg';
     return $api;
-    }
-    add_filter('acf/fields/google_map/api', 'my_acf_google_map_api'); 
+  }
+  add_filter('acf/fields/google_map/api', 'my_acf_google_map_api'); 
 
   /* Add custom post type 'Products' to Theme */
   function create_postTypeProducts() {

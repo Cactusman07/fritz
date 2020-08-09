@@ -72,4 +72,12 @@
     </div>
   </div>
 
+  <div id="mapContainer">
+    <div id='map'></div>
+    <div id='infoWindow' class='hidden'></div>
+  </div>
+
+  <script type="text/javascript" defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN8uDlNkrTYVg4FVKz21sCcUi84y2EhTg&libraries=geometry,places&callback=initMap">
+  </script>
 <?php get_footer(); ?>
