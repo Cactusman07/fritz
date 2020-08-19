@@ -140,7 +140,7 @@ export const scripts = () => {
       filename: js.filename
     },
   }))
-  .pipe(gulpIf(PRODUCTION, uglify()))
+  .pipe(gulpif(PRODUCTION, uglify()))
   .pipe(dest(js.build))
   /* .pipe(notify({
     message: "Scripts updated",
