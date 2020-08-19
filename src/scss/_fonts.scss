@@ -82,12 +82,20 @@
   src: url('../fonts/Skranji/Skranji-Regular.ttf') format('truetype');
 }
 
-$site-font: 'Open Sans',
-Helvetica,
-sans-serif;
+@font-face {
+  font-family: 'PraterSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PraterSansOT.otf') format('opentype');
+}
 
-$header-font: 'Skranji',
-'Open Sans',
-Arial,
-Helvetica,
-sans-serif;
+@font-face {
+  font-family: 'PraterScript';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PraterScriptTwoRegular.ttf') format('truetype');
+}
+
+$site-font: 'PraterScript', 'Skranji', Helvetica, sans-serif;
+
+$header-font: 'PraterSans', 'Open Sans', Arial, Helvetica, sans-serif;

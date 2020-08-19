@@ -21,6 +21,7 @@ const
   cleanCss      = require('gulp-clean-css'),
   yargs         = require('yargs'),
   del           = require('del'),
+  uglify        = require('gulp-uglify'),
   webpack       = require('webpack-stream'),
   notify        = require('gulp-notify'),
 
@@ -139,6 +140,7 @@ export const scripts = () => {
       filename: js.filename
     },
   }))
+  .pipe(gulpIf(PRODUCTION, uglify()))
   .pipe(dest(js.build))
   /* .pipe(notify({
     message: "Scripts updated",

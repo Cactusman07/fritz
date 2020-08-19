@@ -9,6 +9,14 @@
 	},
 	"author": "Sam.Muir",
 	"license": "ISC",
+	"browserslist": [
+		"last 3 and_chr versions",
+		"last 3 chrome versions",
+		"last 3 opera versions",
+		"last 3 ios_saf versions",
+		"last 3 safari versions",
+		"last 3 ie versions"
+	],
 	"devDependencies": {
 		"@babel/core": "^7.9.0",
 		"@babel/plugin-transform-runtime": "^7.10.5",
@@ -17,7 +25,7 @@
 		"autoprefixer": "^9.7.6",
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.1.0",
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.26.12",
 		"cssnano": "^4.1.10",
 		"del": "^5.1.0",
 		"eslint": "^6.8.0",
@@ -32,6 +40,7 @@
 		"gulp-postcss": "^8.0.0",
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
 		"scss": "^0.2.4",
 		"vinyl-named": "^1.1.0",
 		"webpack-stream": "^5.2.1",
