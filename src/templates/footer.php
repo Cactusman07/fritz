@@ -11,10 +11,10 @@
       <div class='row'>
         <div class='col-md-6' id='social'>
           <img src='<?php echo $musicNote; ?>' />
-          <a href='http://www.facebook.com/FritzsWieners' class='link-no-border' target='_blank'>
+          <a href='<?php echo get_theme_mod( 'facebook', '' ); ?>' class='link-no-border' target='_blank'>
             <img src='<?php echo $facebook; ?>' />
           </a>
-          <a href='https://www.instagram.com/fritzs_wieners_nz/' class='link-no-border' target='_blank'>
+          <a href='<?php echo get_theme_mod( 'instagram', '' ); ?>' class='link-no-border' target='_blank'>
             <img src='<?php echo $insta; ?>' />
           </a>
         </div>

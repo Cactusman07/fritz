@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />    
 
-    <?php wp_head(); ?>    
+    <?php wp_head(); ?>
+    <script>
+      var mapLat = <?php echo get_theme_mod( 'map_lat', '-41.2885733' ); ?>;
+      var mapLng = <?php echo get_theme_mod( 'map_lng', '172.630771' ); ?>;
+    </script>
     <script type="text/javascript" defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN8uDlNkrTYVg4FVKz21sCcUi84y2EhTg&libraries=geometry,places&callback=initMap">
     </script>

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The template for displaying The Booking page
+ * The template for displaying The Booking page (NZ)
  *
  * Template Name: Bookings
  *
@@ -41,7 +41,7 @@
     </div>
     
     <div class='center-content red-bg'>
-      <?php include 'booking-contacts.php' ?>
+      <?php include 'booking-contacts-nz.php' ?>
     </div>
     <div class='container center-content padding-bottom-40 padding-top-40'>
       <div class='row'>

@@ -77,6 +77,11 @@
     <div id='infoWindow' class='hidden'></div>
   </div>
 
+  <script>
+      var mapLat = <?php echo get_theme_mod( 'map_lat', '-41.2885733' ); ?>;
+      var mapLng = <?php echo get_theme_mod( 'map_lng', '172.630771' ); ?>;
+  </script>
+
   <script type="text/javascript" defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN8uDlNkrTYVg4FVKz21sCcUi84y2EhTg&libraries=geometry,places&callback=initMap">
   </script>

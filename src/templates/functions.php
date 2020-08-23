@@ -169,4 +169,52 @@
       return get_fields($ID);
   }
   add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
+
+  /* Add custom settings to theme */
+  function add_custom_theme_settings( $wp_customize ){
+    $wp_customize -> add_section('map_settings', array(
+        'title'         => __( 'Map settings' ),
+        'description'   => 'Latitude and Longitude for default centering of the map.'
+    ) );
+
+    $wp_customize -> add_setting('map_lat', array(
+        'type'    => 'text'
+    ) );
+    $wp_customize -> add_control('map_lat', array(
+        'label'   => __( 'Map Latitude' ),
+        'section' => 'map_settings'
+    ) );
+
+    $wp_customize -> add_setting('map_lng', array(
+      'type'    => 'text'
+  ) );
+    $wp_customize -> add_control('map_lng', array(
+      'label'   => __( 'Map Longitude' ),
+      'section' => 'map_settings'
+  ) );
+
+  /* social links */
+  $wp_customize -> add_section('social_settings', array(
+    'title'         => __( 'Social (footer) links' ),
+    'description'   => 'Specify the links for Instagram and Facebook.'
+  ) );
+
+  $wp_customize -> add_setting('facebook', array(
+      'type'    => 'text'
+  ) );
+  $wp_customize -> add_control('facebook', array(
+      'label'   => __( 'Facebook link' ),
+      'section' => 'social_settings'
+  ) );
+
+  $wp_customize -> add_setting('instagram', array(
+    'type'    => 'text'
+  ) );
+  $wp_customize -> add_control('instagram', array(
+    'label'   => __( 'Instagram link' ),
+    'section' => 'social_settings'
+  ) );
+
+  }
+  add_action( 'customize_register', 'add_custom_theme_settings');
 ?>

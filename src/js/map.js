@@ -111,7 +111,7 @@ if(!!document.getElementById('map')){
     const customMapTypeId = 'custom_style';
     const zoom = 5;
     map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: -41.2885733, lng: 172.630771 },
+      center: { lat: mapLat, lng: mapLng },
       zoom: zoom,
       disableDefaultUI: true,
       zoomControl: false,
