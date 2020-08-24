@@ -16,9 +16,6 @@
     <link rel='icon' type='image/png' href='<?php echo $fav_url ?>' sizes='32x32'/>
     <link rel='icon' type='image/png' href='<?php echo $fav_url ?>' sizes='16x16'/>
     <meta name='theme-color' content='#ffffff'/>
-    <!--[if lt IE 9]>
-    <script type='text/javascript' src='<?php echo THEME_URI; ?>js/html5.js'></script>
-    <![endif] -->
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />    
