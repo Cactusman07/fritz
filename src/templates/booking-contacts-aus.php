@@ -5,19 +5,19 @@
     <div class='row'>
       <div class='col-lg-1'></div>
       <div class='col-12 col-sm-4 col-lg-2'>
-        <a id='aucklandContact' href='' class='secondary-button link-no-border'>Auckland</a>
+        <a id='brisbaneContact' href='' class='secondary-button link-no-border'>Brisbane</a>
       </div>
       <div class='col-12 col-sm-4 col-lg-2'>
-        <a id='christchurchContact' href='' class='secondary-button link-no-border'>Christchurch</a>
+        <a id='goldCoastContact' href='' class='secondary-button link-no-border'>Gold Coast</a>
       </div>
       <div class='col-12 col-sm-4 col-lg-2'>
-        <a id='dunedinContact' href='' class='secondary-button link-no-border'>Dunedin</a>
+        <a id='=melbourneContact' href='' class='secondary-button link-no-border'>Melbourne</a>
       </div>
       <div class='col-12 col-sm-4 col-lg-2 offset-sm-2 offset-lg-0'>
-        <a id='hamiltonContact' href='' class='secondary-button link-no-border'>Hamilton</a>
+        <a id='sunshineContact' href='' class='secondary-button link-no-border'>Sunshine Coast</a>
       </div>
       <div class='col-12 col-sm-4 col-lg-2'>
-        <a id='wellingtonContact' href='' class='secondary-button link-no-border'>Wellington</a>
+        <a id='sydneyContact' href='' class='secondary-button link-no-border'>Sydney</a>
       </div>
       <div class='col-lg-1'></div>
     </div>
@@ -26,25 +26,25 @@
   <div id='popupForm' class='hidden'>
     <div class='contact-form'>
       <div id='close'> X </div>
-      <div id='aucklandForm' class='hidden'>
-        <h3>Auckland</h3>
-        <?php echo do_shortcode('[contact-form-7 id="212" title="Contact form Auckland"]'); ?>
+      <div id='brisbaneForm' class='hidden'>
+        <h3>Brisbane</h3>
+        <?php echo do_shortcode('[contact-form-7 id="212" title="Contact form Brisbane"]'); ?>
       </div>
-      <div id='christchurchForm' class='hidden'>
-        <h3>Christchurch</h3>
-        <?php echo do_shortcode('[contact-form-7 id="215" title="Contact form Christchurch"]'); ?>
+      <div id='goldCoastForm' class='hidden'>
+        <h3>Gold Coast</h3>
+        <?php echo do_shortcode('[contact-form-7 id="215" title="Contact form Gold Coast"]'); ?>
       </div>
-      <div id='dunedinForm' class='hidden'>
-        <h3>Dunedin</h3>
-        <?php echo do_shortcode('[contact-form-7 id="216" title="Contact form Dunedin"]'); ?>
+      <div id='melbourneForm' class='hidden'>
+        <h3>Melbourne</h3>
+        <?php echo do_shortcode('[contact-form-7 id="216" title="Contact form Melbourne"]'); ?>
       </div>
-      <div id='hamiltonForm' class='hidden'>
-        <h3>Hamilton</h3>
-        <?php echo do_shortcode('[contact-form-7 id="213" title="Contact form Hamilton"]'); ?>
+      <div id='sunshineCoastForm' class='hidden'>
+        <h3>Sunshine Coast</h3>
+        <?php echo do_shortcode('[contact-form-7 id="213" title="Contact form Sunshine Coast"]'); ?>
       </div>
-      <div id='wellingtonForm' class='hidden'>
-        <h3>Wellington</h3>
-        <?php echo do_shortcode('[contact-form-7 id="214" title="Contact form Wellington"]'); ?>
+      <div id='sydneyForm' class='hidden'>
+        <h3>Sydney</h3>
+        <?php echo do_shortcode('[contact-form-7 id="214" title="Contact form Sydney"]'); ?>
       </div>
     </div>
   </div>

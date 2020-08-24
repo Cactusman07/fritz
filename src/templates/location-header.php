@@ -3,7 +3,6 @@
 <?php $logo = get_template_directory_uri() . '/' . 'images/Fritzs-Wieners-Logo.png'; ?>
 <?php $icon = get_template_directory_uri() . '/' . 'images/HeartIcon.png'; ?>
 
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
