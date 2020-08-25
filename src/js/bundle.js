@@ -106,7 +106,12 @@ if(!!document.getElementById('bookingContainer')){
             $christchurchLink = jQuery('#christchurchContact'),
             $dunedinLink = jQuery('#dunedinContact'),
             $hamiltonLink = jQuery('#hamiltonContact'),
-            $wellingtonLink = jQuery('#wellingtonContact');
+            $wellingtonLink = jQuery('#wellingtonContact'),
+            $brisbaneLink = jQuery('#brisbaneContact'),
+            $goldCoastLink = jQuery('#goldCoastContact'),
+            $melbourneLink = jQuery('#melbourneContact'),
+            $sunshineCoastLink = jQuery('#sunshineCoastContact'),
+            $sydneyLink = jQuery('#sydneyContact');
 
       const $popupFormHolder = jQuery('#popupForm'),
             $closePopup = jQuery('#close');
@@ -115,13 +120,23 @@ if(!!document.getElementById('bookingContainer')){
             $christchurchForm = jQuery('#christchurchForm'),
             $dunedinForm = jQuery('#dunedinForm'),
             $hamiltonForm = jQuery('#hamiltonForm'),
-            $wellingtonForm = jQuery('#wellingtonForm');
+            $wellingtonForm = jQuery('#wellingtonForm'),
+            $brisbaneForm = jQuery('#brisbaneForm'),
+            $goldCoastForm = jQuery('#goldCoastForm'),
+            $melbourneForm = jQuery('#melbourneForm'),
+            $sunshineCoastForm = jQuery('#sunshineCoastForm'),
+            $sydneyForm = jQuery('#sydneyForm');
 
       $aucklandLink
       .add($christchurchLink)
       .add($dunedinLink)
       .add($hamiltonLink)
-      .add($wellingtonLink)      
+      .add($wellingtonLink)
+      .add($brisbaneLink)
+      .add($goldCoastLink)
+      .add($melbourneLink)
+      .add($sunshineCoastLink)
+      .add($sydneyLink)
       .click(function(e) {
         e.preventDefault();
         $popupFormHolder.removeClass('hidden');
@@ -132,6 +147,11 @@ if(!!document.getElementById('bookingContainer')){
       $dunedinLink.click(() => { $dunedinForm.removeClass('hidden'); });
       $hamiltonLink.click(() => { $hamiltonForm.removeClass('hidden'); });
       $wellingtonLink.click(() => { $wellingtonForm.removeClass('hidden'); });
+      $brisbaneLink.click(() => { $brisbaneForm.removeClass('hidden'); });
+      $goldCoastLink.click(() => { $goldCoastForm.removeClass('hidden'); });
+      $melbourneLink.click(() => { $melbourneForm.removeClass('hidden'); });
+      $sunshineCoastLink.click(() => { $sunshineCoastForm.removeClass('hidden'); });
+      $sydneyLink.click(() => { $sydneyForm.removeClass('hidden'); });
 
       jQuery('.contact-form').click(function(event){
         event.stopPropagation();
@@ -144,6 +164,11 @@ if(!!document.getElementById('bookingContainer')){
         $dunedinForm.addClass('hidden');
         $wellingtonForm.addClass('hidden');
         $hamiltonForm.addClass('hidden');
+        $brisbaneForm.addClass('hidden');
+        $goldCoastForm.addClass('hidden');
+        $melbourneForm.addClass('hidden');
+        $sunshineCoastForm.addClass('hidden');
+        $sydneyForm.addClass('hidden');
       });
     } 
   );

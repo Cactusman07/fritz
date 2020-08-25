@@ -5,13 +5,15 @@ let locations = [],
     locationIcons = [],
     map;
 
+const pathname = window.location.pathname.includes('fritz-aus') ? '/fritz-aus' : window.location.pathname.includes('fritz-nz') ? '/fritz-nz' : '';
+
 const hostname = window.location.hostname,
   url = (hostname === 'localhost') ?
     'http://localhost:81/fritz.com.au/wp-json/wp/v2/locations?_embed&custom_per_page=300' : 
-    'https://' + hostname + '/wp-json/wp/v2/locations?_embed&custom_per_page=300',
+    'https://' + hostname + pathname + '/wp-json/wp/v2/locations?_embed&custom_per_page=300',
   icon = (hostname === 'localhost') ? 
     'http://localhost:81/fritz.com.au/wp-content/themes/fritz/images/map-icon.png' :
-    'https://' + hostname + '/wp-content/themes/fritz/images/map-icon.png';    
+    'https://' + hostname + pathname + '/wp-content/themes/fritz/images/map-icon.png';    
 
 if(!!document.getElementById('map')){
 
@@ -126,7 +128,7 @@ if(!!document.getElementById('map')){
     map.mapTypes.set(customMapTypeId, customMapType);
     map.setMapTypeId(customMapTypeId);
     map.setOptions({
-      draggable: false,
+      draggable: true,
       draggableCursor: null,
       zoomControl: false, 
       minZoom: zoom, 
