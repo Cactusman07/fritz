@@ -18,7 +18,7 @@ get_header(); ?>
       <div class='row'>
         <div class='col'>        
             <content>
-              <p>We're sorry, that page URL can't be found. Please use the menu to find where you want to go, or <a style='color:#c8102e;' href='<?php get_template_directory_uri(); ?>'>return home</a>.
+              <p>We're sorry, that page URL can't be found. Please use the menu to find where you want to go, or <a style='color:#c8102e;' href='<?php echo get_home_url(); ?>'>return home</a>.
             </content>
         </div>
       </div>

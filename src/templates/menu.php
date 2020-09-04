@@ -13,6 +13,8 @@
 
 <?php get_header(); ?>
 <?php $imgUrl = get_the_post_thumbnail_url(); ?>
+<?php $silverMedal = get_template_directory_uri() . '/' . 'images/2019_FFS_Silver_CMYK.png'; ?>
+<?php $bronzeMedal = get_template_directory_uri() . '/' . 'images/2019_FFS_Bronze_CMYK.png'; ?>
 
   <div id='menuContainer'>
   <?php if($imgUrl != '' || $imgUrl != null){ ?>
@@ -25,7 +27,7 @@
     <div class='container center-content'>
       <div class='row'>
         <div class='col'>        
-          <h1 class='animate__animated animate__pulse white'><?php the_title(); ?></h1>        
+          <h1 class='animate__animated animate__pulse'><?php the_title(); ?></h1>        
         </div>
       </div>
     </div>
@@ -47,10 +49,14 @@
           ?>
           </div>
         <?php while ( have_posts() ) : the_post(); ?>
+          <div class='col-12' id='medals'>
+            <div class='left-50'><img src='<?php echo $silverMedal;?>'></div>
+            <div class='right-50'><img src='<?php echo $bronzeMedal;?>'></div>
+          </div>  
           <div class='col-12'>
             <h3><?php echo the_field('menu_header'); ?></h3>
             <p><?php echo the_field('menu_description'); ?></p>            
-          </div>
+          </div>          
           
           <?php 
             $query = new WP_Query ( array ( 

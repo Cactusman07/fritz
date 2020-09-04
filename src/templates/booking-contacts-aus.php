@@ -5,20 +5,20 @@
     <div class='row'>
       <div class='col-lg-1'></div>
       <div class='col-12 col-sm-4 col-lg-2'>
+        <a id='sydneyContact' href='' class='secondary-button link-no-border'>Sydney</a>
+      </div>
+      <div class='col-12 col-sm-4 col-lg-2'>
         <a id='brisbaneContact' href='' class='secondary-button link-no-border'>Brisbane</a>
       </div>
       <div class='col-12 col-sm-4 col-lg-2'>
         <a id='goldCoastContact' href='' class='secondary-button link-no-border'>Gold Coast</a>
       </div>
-      <div class='col-12 col-sm-4 col-lg-2'>
+      <div class='col-12 col-sm-4 col-lg-2 offset-sm-2 offset-lg-0'>
         <a id='melbourneContact' href='' class='secondary-button link-no-border'>Melbourne</a>
       </div>
-      <div class='col-12 col-sm-4 col-lg-2 offset-sm-2 offset-lg-0'>
-        <a id='sunshineCoastContact' href='' class='secondary-button link-no-border'>Sunshine Coast</a>
-      </div>
       <div class='col-12 col-sm-4 col-lg-2'>
-        <a id='sydneyContact' href='' class='secondary-button link-no-border'>Sydney</a>
-      </div>
+        <a id='sunshineCoastContact' href='' class='secondary-button link-no-border'>Sunshine Coast</a>
+      </div>      
       <div class='col-lg-1'></div>
     </div>
   </div>

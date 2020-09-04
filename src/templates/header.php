@@ -21,7 +21,7 @@
         <div id='topLinks'>
           <?php wp_nav_menu( array( 'theme_location' => 'top-links', 'container' => '' ) ); ?>
         </div>
-        <a href='<?php get_template_directory_uri(); ?>' class='link-no-border'>
+        <a href='<?php echo get_home_url(); ?>' class='link-no-border'>
           <img id='logo' src='<?php echo $logo; ?>'/>
         </a>
 

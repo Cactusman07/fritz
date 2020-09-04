@@ -5,7 +5,7 @@
 
   h1.not-in-image {
     padding: $med 0;
-    color: $white;
+    color: $aioli;
     // @include textShadow($black);
   }
 
@@ -15,7 +15,7 @@
   }
 
   .booking-desc {
-    color: $white;
+    color: $aioli;
     padding: $x-sm;
     border-radius: 4px;
     border: solid 4px $orange;
@@ -45,7 +45,7 @@
 
 #bookingContacts {
   padding: $xx-lrg 0;
-  color: $white;
+  color: $aioli;
 
   /* h2,
   h3 {
@@ -126,7 +126,7 @@
         background-color: $orange;
         font-weight: 600;
         font-size: 1.4em;
-        color: $white;
+        color: $aioli;
         // @include textShadow($black);
         border: 1px solid $black;
         box-shadow: $black 2px 2px 4px 2px;
