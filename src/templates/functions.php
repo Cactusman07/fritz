@@ -246,4 +246,6 @@
     );
   }
   add_action( 'customize_register', 'add_custom_theme_settings');
+
+  add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 ?>

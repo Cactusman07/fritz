@@ -25,10 +25,15 @@ header {
 
 	#headerIcon {
 		position: fixed;
-		top: 140px;
-		right: $xx-lrg;
+		top: 80px;
+		right: $lrg;
 		width: $huge;
 		height: auto;
+		
+		@include phablet {
+			top: 140px;
+			right: $xx-lrg;
+		}
 	}
 
 	// Menu
