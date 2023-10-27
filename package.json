@@ -51,7 +51,7 @@
 		"jquery-match-height": "^0.7.2",
 		"@babel/runtime": "^7.10.5",
 		"regenerator-runtime": "^0.13.5",
-		"moment": "^2.25.3",
+		"moment": "^2.29.4",
 		"snazzy-info-window": "^1.1.1"
 	}
 }
