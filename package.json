@@ -49,7 +49,7 @@
 	"dependencies": {
 		"jquery": "^3.5.1",
 		"jquery-match-height": "^0.7.2",
-		"@babel/runtime": "^7.10.5",
+		"@babel/runtime": "^7.28.4",
 		"regenerator-runtime": "^0.13.5",
 		"moment": "^2.29.4",
 		"snazzy-info-window": "^1.1.1"
