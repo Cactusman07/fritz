@@ -28,5 +28,5 @@ archive.on('error', (err) => {
 });
 
 archive.pipe(output);
-archive.directory(buildDir, 'fritzs-wieners-theme');
+archive.directory(buildDir, false);
 await archive.finalize();

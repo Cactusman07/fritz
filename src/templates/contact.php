@@ -48,9 +48,7 @@
         <div class='row'>
           <div class='col'>
             <br/><br/>
-            <h2>Get in touch</h2> 
-            <?php echo do_shortcode('[contact-form-7 id="258" title="General enquiries"]'); ?>
-          </div>
+           </div>
         </div>
       </div>
     </div>

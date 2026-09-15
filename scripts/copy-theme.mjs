@@ -28,23 +28,34 @@ function copyDir(srcDir, destDir) {
 
 function copyThemeFiles() {
   ensureDir(target);
-  const items = ['templates', 'images', 'fonts', 'js', 'scss'];
 
-  for (const item of items) {
-    const srcPath = path.join(source, item);
-    const destPath = path.join(target, item);
-    if (fs.existsSync(srcPath)) {
-      if (item === 'js') {
-        fs.mkdirSync(path.join(target, 'js'), { recursive: true });
+  const templateDir = path.join(source, 'templates');
+  if (fs.existsSync(templateDir)) {
+    const entries = fs.readdirSync(templateDir, { withFileTypes: true });
+    for (const entry of entries) {
+      const srcPath = path.join(templateDir, entry.name);
+      const destPath = path.join(target, entry.name);
+      if (entry.isDirectory()) {
         continue;
       }
-      copyDir(srcPath, destPath);
+      fs.copyFileSync(srcPath, destPath);
     }
   }
 
-  const styleEntry = path.join(source, 'templates', 'style.css');
-  if (fs.existsSync(styleEntry)) {
-    fs.copyFileSync(styleEntry, path.join(target, 'style.css'));
+  const assetDirs = ['images', 'fonts'];
+  for (const item of assetDirs) {
+    const srcPath = path.join(source, item);
+    if (fs.existsSync(srcPath)) {
+      copyDir(srcPath, path.join(target, item));
+    }
+  }
+
+  const styleEntry = path.join(target, 'style.css');
+  if (!fs.existsSync(styleEntry)) {
+    const fallback = path.join(source, 'templates', 'style.css');
+    if (fs.existsSync(fallback)) {
+      fs.copyFileSync(fallback, styleEntry);
+    }
   }
 }
 
