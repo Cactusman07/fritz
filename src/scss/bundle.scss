@@ -2,6 +2,17 @@
 @import './media-queries';
 @import './fonts';
 @import './mixins-functions';
+@import './header.scss';
+@import './footer.scss';
+@import './front-page.scss';
+@import './product-container.scss';
+@import './about-us.scss';
+@import './menu.scss';
+@import './franchise.scss';
+@import './bookings.scss';
+@import './defaultPage.scss';
+@import './locations.scss';
+@import './contact.scss';
 
 html,
 body {
@@ -136,15 +147,3 @@ ul {
 .shown {
 	display: initial;
 }
-
-@import './header.scss';
-@import './footer.scss';
-@import './front-page.scss';
-@import './product-container.scss';
-@import './about-us.scss';
-@import './menu.scss';
-@import './franchise.scss';
-@import './bookings.scss';
-@import './defaultPage.scss';
-@import './locations.scss';
-@import './contact.scss';

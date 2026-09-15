@@ -111,7 +111,8 @@ if(!!document.getElementById('bookingContainer')){
             $goldCoastLink = jQuery('#goldCoastContact'),
             $melbourneLink = jQuery('#melbourneContact'),
             $sunshineCoastLink = jQuery('#sunshineCoastContact'),
-            $sydneyLink = jQuery('#sydneyContact');
+            $sydneyLink = jQuery('#sydneyContact'),
+            $napierHastingsLink = jQuery('#napierHastingsContact');
 
       const $popupFormHolder = jQuery('#popupForm'),
             $closePopup = jQuery('#close');
@@ -125,6 +126,7 @@ if(!!document.getElementById('bookingContainer')){
             $goldCoastForm = jQuery('#goldCoastForm'),
             $melbourneForm = jQuery('#melbourneForm'),
             $sunshineCoastForm = jQuery('#sunshineCoastForm'),
+            $napierHastingsForm = jQuery('#napierHastingsForm'),
             $sydneyForm = jQuery('#sydneyForm');
 
       $aucklandLink
@@ -137,6 +139,7 @@ if(!!document.getElementById('bookingContainer')){
       .add($melbourneLink)
       .add($sunshineCoastLink)
       .add($sydneyLink)
+      .add($napierHastingsLink)
       .click(function(e) {
         e.preventDefault();
         $popupFormHolder.removeClass('hidden');
@@ -152,6 +155,7 @@ if(!!document.getElementById('bookingContainer')){
       $melbourneLink.click(() => { $melbourneForm.removeClass('hidden'); });
       $sunshineCoastLink.click(() => { $sunshineCoastForm.removeClass('hidden'); });
       $sydneyLink.click(() => { $sydneyForm.removeClass('hidden'); });
+      $napierHastingsLink.click(() => { $napierHastingsForm.removeClass('hidden'); });
 
       jQuery('.contact-form').click(function(event){
         event.stopPropagation();
@@ -169,6 +173,7 @@ if(!!document.getElementById('bookingContainer')){
         $melbourneForm.addClass('hidden');
         $sunshineCoastForm.addClass('hidden');
         $sydneyForm.addClass('hidden');
+        $napierHastingsForm.addClass('hidden');
       });
     } 
   );

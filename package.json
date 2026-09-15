@@ -1,57 +1,30 @@
 {
-	"name": "fritzs-wieners",
-	"version": "1.0.0",
-	"description": "A theme for Fritzs Wieners",
-	"main": "index",
-	"scripts": {
-		"start": "gulp",
-		"build": "gulp build --prod"
-	},
-	"author": "Sam.Muir",
-	"license": "ISC",
-	"browserslist": [
-		"last 3 and_chr versions",
-		"last 3 chrome versions",
-		"last 3 opera versions",
-		"last 3 ios_saf versions",
-		"last 3 safari versions",
-		"last 3 ie versions"
-	],
-	"devDependencies": {
-		"@babel/core": "^8.0.1",
-		"@babel/plugin-transform-runtime": "^8.0.1",
-		"@babel/preset-env": "^8.0.2",
-		"@babel/register": "^8.0.1",
-		"autoprefixer": "^10.4.16",
-		"babel-eslint": "^10.1.0",
-		"babel-loader": "^10.1.1",
-		"browser-sync": "^3.0.4",
-		"cssnano": "^6.0.1",
-		"del": "^5.1.0",
-		"eslint": "^9.39.1",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^8.0.0",
-		"gulp-babel": "^8.1.0",
-		"gulp-clean-css": "^4.3.0",
-		"gulp-concat": "^2.6.1",
-		"gulp-if": "^3.0.0",
-		"gulp-imagemin": "^9.2.0",
-		"gulp-notify": "^3.2.0",
-		"gulp-postcss": "^9.0.1",
-		"gulp-sass": "^5.1.0",
-		"gulp-sourcemaps": "^2.6.5",
-		"gulp-uglify": "^3.0.2",
-		"scss": "^0.2.4",
-		"vinyl-named": "^1.1.0",
-		"webpack-stream": "^7.0.0",
-		"yargs": "^15.3.1"
-	},
-	"dependencies": {
-		"jquery": "^3.5.1",
-		"jquery-match-height": "^0.7.2",
-		"@babel/runtime": "^7.28.4",
-		"regenerator-runtime": "^0.13.5",
-		"moment": "^2.29.4",
-		"snazzy-info-window": "^1.1.1"
-	}
+  "name": "fritzs-wieners-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Theme build tooling for Fritz's Wieners",
+  "scripts": {
+    "clean": "rimraf build dist",
+    "build:css": "sass src/scss/bundle.scss build/theme/styles/bundle.css --style=expanded --no-source-map",
+    "build:js": "esbuild src/js/app.js --bundle --platform=browser --format=iife --sourcemap --outfile=build/theme/js/bundle.js",
+    "copy:theme": "node scripts/copy-theme.mjs",
+    "build": "npm run clean && npm run build:css && npm run build:js && npm run copy:theme && node scripts/package-theme.mjs"
+  },
+  "author": "Sam Muir",
+  "license": "ISC",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "esbuild": "^0.25.5",
+    "rimraf": "^6.0.0",
+    "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jquery-match-height": "^0.7.2"
+  }
 }

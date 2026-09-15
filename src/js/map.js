@@ -1,5 +1,4 @@
 /* map.js */
-import regeneratorRuntime from 'regenerator-runtime';
 
 let locations = [],
     locationIcons = [],
