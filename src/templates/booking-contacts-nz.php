@@ -17,7 +17,7 @@
         <a id='wellingtonContact' href='' class='secondary-button link-no-border'>Wellington</a>
       </div>
 		<div class='col-12 col-sm-6 col-lg-2'>
-        <a id='napierHastingsContact' href='' class='secondary-button link-no-border'>Napier Hastings</a>
+        <a id='napierHastingsContact' href='' class='secondary-button link-no-border'>Hawke's Bay</a>
       </div>
     </div>
     <div class='col-lg-1'></div>
@@ -43,8 +43,8 @@
         <?php echo do_shortcode('[contact-form-7 id="b59f0d2" title="Contact form Wellington"]'); ?>
       </div>
 		<div id='napierHastingsForm' class='hidden'>
-        <h3>Napier Hastings</h3>
-        <?php echo do_shortcode('[contact-form-7 id="d379300" title="Contact form Napier-Hastings"]'); ?>
+        <h3>Hawke's Bay</h3>
+        <?php echo do_shortcode('[contact-form-7 id="d379300" title="Contact form Hawke\'s Bay"]'); ?>
       </div>
     </div>
   </div>
