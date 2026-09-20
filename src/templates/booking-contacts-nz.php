@@ -44,7 +44,7 @@
       </div>
 		<div id='napierHastingsForm' class='hidden'>
         <h3>Hawke's Bay</h3>
-        <?php echo do_shortcode('[contact-form-7 id="d379300" title="Contact form Hawke\'s Bay"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="d379300" title="Contact form Hawkes Bay"]'); ?>
       </div>
     </div>
   </div>
